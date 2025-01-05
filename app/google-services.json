@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "873800771041",
+    "project_id": "shellapp-4f372",
+    "storage_bucket": "shellapp-4f372.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873800771041:android:21a1dec5033f3fcffd9ea0",
+        "android_client_info": {
+          "package_name": "com.example.shellapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873800771041-esjecj9oeofdato9bv1du0o347it85m9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYYe7zdajh9zTas0a4pVBd2zrLnBCVKRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873800771041-esjecj9oeofdato9bv1du0o347it85m9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/loginLinearLayoutImage"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/loginViewBarra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/loginIcono"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/loginLinearLayoutApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginViewBarra">
+
+        <TextView
+            android:id="@+id/loginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Ingresa tu Email"
+            android:textAlignment="center"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/loginEditEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Ingresa tu Password"
+            android:textAlignment="center"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/loginEditPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/loginUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Ingresa tu Nombre"
+            android:textAlignment="center"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/loginEditUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="text"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/loginTurtleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Ingresa el nombre de tu tortuga"
+            android:textAlignment="center"
+            android:textColor="#3C3C3C"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/loginEditTurtleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="text"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/unirteButtonUnirte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFC642"
+            android:text="Unirte"
+            android:textAllCaps="false"
+            android:textColor="#3C3C3C"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/unirteButtonInicioSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#A2E17C"
+            android:text="Iniciar Sesión"
+            android:textAllCaps="false"
+            android:textColor="#3C3C3C"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/loginViewBarra"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="#FF4242"
+        app:layout_constraintBottom_toTopOf="@+id/loginLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginLinearLayoutImage" />
+
+    <LinearLayout
+        android:id="@+id/loginLinearLayoutApp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#232323"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginLinearLayout">
+
+        <TextView
+            android:id="@+id/loginTextViewApp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="ShellApp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

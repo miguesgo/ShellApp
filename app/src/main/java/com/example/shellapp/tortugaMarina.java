@@ -1,0 +1,116 @@
+package com.example.shellapp;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+public class tortugaMarina extends AppCompatActivity {
+
+    TextView wikiTituloPrincipal;
+    TextView wikiAcercaDe;
+    TextView wikiDescripcion;
+    TextView wikiTaxonomia;
+    TextView wikiSexo;
+    TextView wikiAlimentacion;
+    TextView wikiEspacio;
+    TextView wikiCuidados;
+    TextView wikiEnfermedades;
+    TextView wikiEsperanzaVida;
+
+    ImageButton userButtonHome;
+    ImageButton userButtonBuscar;
+    ImageButton userButtonEdit;
+    ImageButton userButtonUser;
+    ImageButton userConfiguracion;
+    TextView userUsername;
+
+    FirebaseAuth autent;
+    FirebaseFirestore firebaseFirestore;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tortuga_marina);
+
+        autent = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
+
+        wikiTituloPrincipal = findViewById(R.id.wikiTituloPrincipal);
+        wikiAcercaDe = findViewById(R.id.wikiAcercaDe);
+        wikiDescripcion = findViewById(R.id.wikiDescripcion);
+        wikiTaxonomia = findViewById(R.id.wikiTaxonomia);
+        wikiSexo = findViewById(R.id.wikiSexo);
+        wikiAlimentacion = findViewById(R.id.wikiAlimentacion);
+        wikiEspacio = findViewById(R.id.wikiEspacio);
+        wikiCuidados = findViewById(R.id.wikiCuidados);
+        wikiEnfermedades = findViewById(R.id.wikiEnfermedades);
+        wikiEsperanzaVida = findViewById(R.id.wikiEsperanzaVida);
+
+        userConfiguracion = findViewById(R.id.userConfiguracion);
+        userButtonHome = findViewById(R.id.userButtonHome);
+        userButtonBuscar = findViewById(R.id.userButtonBuscar);
+        userButtonEdit = findViewById(R.id.userButtonEdit);
+        userButtonUser = findViewById(R.id.userButtonUser);
+        userUsername = findViewById(R.id.userUsername);
+
+        userConfiguracion.setOnClickListener(view -> {
+            startActivity(new Intent(tortugaMarina.this, Configuracion.class));
+        });
+
+        userButtonUser.setOnClickListener(view -> {
+            startActivity(new Intent(tortugaMarina.this, User.class));
+        });
+
+        userButtonHome.setOnClickListener(view -> {
+            startActivity(new Intent(tortugaMarina.this, Wiki.class));
+        });
+
+        userButtonEdit.setOnClickListener(view -> {
+            startActivity(new Intent(tortugaMarina.this, Edit.class));
+        });
+
+        userButtonBuscar.setOnClickListener(view -> {
+            startActivity(new Intent(tortugaMarina.this, Search.class));
+        });
+
+        DocumentReference docRef = firebaseFirestore.collection("tortugaMarina").
+                document("tortugaMarinaInfo");
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        wikiTituloPrincipal.setText(document.getString("Nombre"));
+                        wikiAcercaDe.setText(document.getString("Especie"));
+                        wikiDescripcion.setText(document.getString("Descripción"));
+
+                        wikiTaxonomia.setText(document.getString("Taxonomía"));
+                        wikiSexo.setText(document.getString("Vivienda"));
+                        wikiAlimentacion.setText(document.getString("Características"));
+                        wikiEspacio.setText(document.getString("Amenazas"));
+                        wikiCuidados.setText(document.getString("Formas de ayudar"));
+                    }
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("this", e.getMessage());
+            }
+        });
+    }
+}

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#383838"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/userUsername"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="#383838"
+            android:backgroundTint="#383838"
+            android:gravity="bottom|fill"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/userConfiguracion"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/userconfiguracion"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/setting"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <ImageButton
+            android:id="@+id/userButtonHome"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/userhome"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/home"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/userButtonBuscar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/usersearch"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/search"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/userButtonEdit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/useredit"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/edit"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/userButtonUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/useruser"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/user"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                android:background="#4A4A4A"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/wikiViewTortugaPintada"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#8BC34A"
+                    android:contentDescription="@string/userencabezado"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/shell_default" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/userimageprofile"
+                    app:srcCompat="@drawable/icon" />
+
+                <TextView
+                    android:id="@+id/userPrimaryUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#3C3C3C"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginBottom="222dp"
+                android:background="#383838"
+                android:contentDescription="@string/wiki_imagenencabezado_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                app:srcCompat="@drawable/proximamente" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

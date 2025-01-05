@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Configuracion">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#383838"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/configuracionRegreso"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/configuracionTexto"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:background="#383838"
+            android:backgroundTint="#383838"
+            android:gravity="center"
+            android:text="Configuración"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <ImageButton
+            android:id="@+id/userButtonHome"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/home"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="SpeakableTextPresentCheck"  />
+
+        <ImageButton
+            android:id="@+id/userButtonBuscar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/search"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/userButtonEdit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/edit"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/userButtonUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/user"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/userPrimaryUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#EDEDED"
+                    android:gravity="left|bottom|fill"
+                    android:text="  Sesión"
+                    android:textColor="#3C3C3C"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/configuracionLogOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/power_sesion"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

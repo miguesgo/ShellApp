@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shellapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShellApp">
+        <activity
+            android:name=".Edit"
+            android:exported="false" />
+        <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
+            android:name=".tortugaMarina"
+            android:exported="false" />
+        <activity
+            android:name=".tortugaRusa"
+            android:exported="false" />
+        <activity
+            android:name=".tortugaMora"
+            android:exported="false" />
+        <activity
+            android:name=".tortugaMediterranea"
+            android:exported="false" />
+        <activity
+            android:name=".tortugaEstrellada"
+            android:exported="false" />
+        <activity
+            android:name=".tortugaAfricana"
+            android:exported="false" />
+        <activity
+            android:name=".tierraIndex"
+            android:exported="false" />
+        <activity
+            android:name=".tortugaAligator"
+            android:exported="false" />
+        <activity
+            android:name=".RioIndex"
+            android:exported="false" />
+        <activity
+            android:name=".TortugasRio"
+            android:exported="false" />
+        <activity
+            android:name=".RioTortugaPintada"
+            android:exported="false" />
+        <activity
+            android:name=".Wiki"
+            android:exported="false" />
+        <activity
+            android:name=".Configuracion"
+            android:exported="false" />
+        <activity
+            android:name=".User"
+            android:exported="false" />
+        <activity
+            android:name=".Unirte"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
